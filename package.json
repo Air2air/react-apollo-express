@@ -4,14 +4,18 @@
   "description": "App for LifeApp",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Todd Dunning",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "concurrently": "^6.1.0",
+    "cors": "^2.8.5",
+    "create-react-app": "^4.0.3",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0"
